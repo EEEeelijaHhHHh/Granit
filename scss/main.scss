@@ -8,6 +8,7 @@ $white: #fff;
 $black: #000;
 $light-gray: #969696;
 $gray: #626262;
+/* /Variables */
 
 /* Common */
 * {
@@ -22,15 +23,20 @@ body {
 .container {
   max-width: 940px;
   margin: 0 auto;
+  position: relative;
 }
 
-/* Header */
+/* /Common */
+
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
+
   &-content {
     margin-left: 15px;
+
     &__title {
       color: $main-color;
       font-size: 20px;
@@ -39,27 +45,52 @@ body {
       letter-spacing: 2px;
       margin: 0 0 10px 0;
     }
+
     &__subtitle {
       color: $light-gray;
       font-size: 12px;
       font-weight: 300;
+      margin: 0;
     }
   }
 }
 
+/* /Logo */
+
+/* Buttons */
+.btn {
+  width: 180px;
+  line-height: 50px;
+  color: #0d0d0d;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: $active-color;
+  border: none;
+  cursor: pointer;
+
+  &_large {
+    width: 200px;
+  }
+}
+
+/* Callback Section */
 .callback {
   display: flex;
+
   &-wrapper {
     color: $white;
   }
+
   &-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 35px 0 60px 0;
   }
+
   &-content {
     margin-right: 30px;
+
     &__tel {
       display: block;
       padding-bottom: 10px;
@@ -68,12 +99,14 @@ body {
       font-weight: 700;
       text-decoration: none;
     }
+
     &__text {
       display: block;
       color: $light-gray;
       font-size: 12px;
     }
   }
+
   &__btn {
     padding: 0 20px;
     color: $main-color;
@@ -83,5 +116,95 @@ body {
     background-color: $white;
     border: 2px solid $main-color;
     cursor: pointer;
+  }
+}
+
+/* /Callback Section */
+
+/* Main Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  background-color: #ffcc00;
+  height: 60px;
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    color: $black;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+/* Header */
+.header {
+  background: url('../img/header-bg.jpg') no-repeat 50% 50%;
+  background-size: cover;
+  position: relative;
+  height: 550px;
+  z-index: 0;
+
+  &-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: rgba(#303030, .7);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: translate(0, -50%);
+    z-index: 5;
+  }
+
+  &-content {
+    z-index: 5;
+    color: $white;
+
+    &__title {
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0 0 40px 0;
+    }
+
+    &__text {
+      font-weight: 300;
+      line-height: 2;
+      margin: 0 0 65px 0;
+    }
+
+    &__btn {
+      margin-right: 30px;
+    }
+
+    &__desc {
+      font-size: 12px;
+    }
+
+    &__link {
+      color: $white;
+      font-weight: 500;
+      margin-left: 10px;
+    }
   }
 }
