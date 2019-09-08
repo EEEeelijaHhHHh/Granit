@@ -207,12 +207,12 @@ body {
       margin-left: 10px;
     }
   }
-<<<<<<< HEAD
 }
 
 /* Section */
 .section {
   padding: 80px 0;
+
   &__title {
     text-align: center;
     color: $main-color;
@@ -222,11 +222,13 @@ body {
     margin-bottom: 80px;
   }
 }
+/* /Section */
 
 /* Stock Section */
 .stock {
   display: flex;
   justify-content: space-between;
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -236,12 +238,18 @@ body {
     flex-basis: 300px;
     margin-right: 20px;
     border: 2px solid #f6f6f6;
+    transition: all .2s ease-in;
+    &:hover {
+      background-color: #f6f6f6;
+    }
+
     &:last-child {
       margin-right: 0;
     }
   }
-  &__img {
-  }
+
+  &__img {}
+
   &__title {
     color: $main-color;
     font-size: 15px;
@@ -249,6 +257,7 @@ body {
     text-decoration: underline;
     margin: 45px 0 20px 0;
   }
+
   &__text {
     color: $gray;
     font-size: 13px;
@@ -257,6 +266,7 @@ body {
     width: 225px;
     flex: 1;
   }
+
   &__price {
     display: block;
     color: #0f0f0f;
@@ -264,6 +274,41 @@ body {
     font-weight: 500;
     margin-bottom: 30px;
   }
-=======
->>>>>>> fd69cc7974beb85b947086d1fab0cedb34f70b4c
+}
+/* /Stock Section */
+
+/* Advantage Section */
+.advantage {
+  display: flex;
+  &-wrapper {
+    background-color: #f4f4f4;
+  }
+  &__item {
+    flex-basis: 300px;
+    text-align: center;
+    background-color: #f4f4f4;
+    border: 2px solid #ffffff;
+    margin-right: 20px;
+    padding: 40px 0;
+    transition: all .2s ease-in;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  &__title {
+    color: $main-color;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+  }
+  &__text {
+    color: $main-color;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 auto;
+    width: 210px;
+  }
 }
