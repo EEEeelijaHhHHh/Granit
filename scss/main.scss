@@ -222,6 +222,7 @@ body {
     margin-bottom: 80px;
   }
 }
+
 /* /Section */
 
 /* Stock Section */
@@ -239,6 +240,7 @@ body {
     margin-right: 20px;
     border: 2px solid #f6f6f6;
     transition: all .2s ease-in;
+
     &:hover {
       background-color: #f6f6f6;
     }
@@ -275,14 +277,17 @@ body {
     margin-bottom: 30px;
   }
 }
+
 /* /Stock Section */
 
 /* Advantage Section */
 .advantage {
   display: flex;
+
   &-wrapper {
     background-color: #f4f4f4;
   }
+
   &__item {
     flex-basis: 300px;
     text-align: center;
@@ -291,19 +296,23 @@ body {
     margin-right: 20px;
     padding: 40px 0;
     transition: all .2s ease-in;
+
     &:last-child {
       margin-right: 0;
     }
+
     &:hover {
       background-color: #fff;
     }
   }
+
   &__title {
     color: $main-color;
     font-size: 15px;
     font-weight: 500;
     margin: 0 0 20px 0;
   }
+
   &__text {
     color: $main-color;
     font-size: 12px;
@@ -312,3 +321,68 @@ body {
     width: 210px;
   }
 }
+
+/* /Advantage Section */
+
+/* Goods Section */
+.goods {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 220px;
+    border: 2px solid #f6f6f6;
+    padding: 20px 0;
+    transition: all .2s ease-in;
+    &:hover {
+      background-color: #f6f6f6;
+    }
+  }
+  &__img {
+    position: relative;
+  }
+  &__stock {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 2;
+    padding: 0 10px;
+  }
+  &__title {
+    color: $main-color;
+    font-size: 13px;
+    text-decoration: underline;
+    text-align: center;
+    flex: 1;
+  }
+  &__recent-price {
+    color: #979797;
+    font-size: 10px;
+    text-decoration: line-through;
+    margin-right: 15px;
+  }
+  &__price {
+    color: $black;
+    font-size: 16px;
+    font-weight: 500;
+    &_stock {
+      color: #ff0000;
+    }
+    &-content {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__btn {
+    margin-top: 25px;
+  }
+}
+
+/* /Goods Section */
