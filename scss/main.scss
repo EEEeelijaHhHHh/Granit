@@ -76,6 +76,7 @@ body {
   border: none;
   cursor: pointer;
   transition: all .2s ease-in;
+
   &:hover {
     background-color: darken($active-color, 8%);
   }
@@ -149,6 +150,7 @@ body {
     border: 2px solid $main-color;
     cursor: pointer;
     transition: all .2s ease-in;
+
     &:hover {
       background-color: $main-color;
       color: $white;
@@ -160,6 +162,7 @@ body {
       background-color: $main-color;
       margin-top: 30px;
       line-height: 3;
+
       &:hover {
         background-color: $white;
         color: $main-color;
@@ -181,7 +184,6 @@ body {
 
   &__item {
     list-style: none;
-    height: 100%;
     width: 100%;
     text-align: center;
     line-height: 60px;
@@ -194,6 +196,7 @@ body {
     text-decoration: none;
     background-color: #ffcc00;
     transition: all .2s ease-in;
+
     &:hover {
       background-color: lighten(#ffcc00, 8%);
     }
@@ -233,6 +236,51 @@ body {
     width: 100%;
     transform: translate(0, -50%);
     z-index: 5;
+
+    &__btn {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $white;
+      border: solid 1px $main-color;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+
+      &-hamburger {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 20px;
+        height: 2px;
+        background-color: $main-color;
+
+        &::after,
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 20px;
+          height: 2px;
+          background-color: $black;
+          transition: all .2s ease-in;
+        }
+
+        &::after {
+          transform: translate(0, 5px);
+
+        }
+
+        &::before {
+          transform: translate(0, -5px);
+        }
+      }
+    }
   }
 
   &-content {

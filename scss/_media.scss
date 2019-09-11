@@ -37,6 +37,33 @@
     &-inner {
       padding: 35px 20px 60px 20px;
     }
+    &__btn {
+      &-header {
+        display: none;
+      }
+    }
+  }
+  
+  .header {
+    &-nav {
+      z-index: 10;
+      transform: translate(0, 0);
+      &_active .main-nav {
+        display: flex;
+      }
+      &__btn {
+        display: block;
+      }
+    }
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    &__item {
+      line-height: 70px;
+    }
   }
 
   .section {
@@ -106,10 +133,6 @@
 
   .header {
     height: 400px;
-
-    &-nav {
-      display: none;
-    }
 
     &-content {
       text-align: center;
