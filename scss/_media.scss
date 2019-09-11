@@ -6,6 +6,23 @@
   .container {
     max-width: 750px;
   }
+
+  .goods {
+    flex-wrap: wrap;
+
+    &__item {
+      flex-basis: 49%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .services {
+    flex-wrap: wrap;
+    &__item {
+      flex-basis: 100%;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 /* Small Devices, Tablets */
@@ -23,10 +40,15 @@
 
   .section {
     padding: 40px 0;
+
+    &__title {
+      margin-bottom: 60px;
+    }
   }
-  
+
   .stock {
     flex-direction: column;
+
     &__item {
       margin: 0 0 10px 0;
     }
@@ -49,33 +71,60 @@
 
   .header {
     height: 400px;
+
     &-nav {
       display: none;
     }
+
     &-content {
       text-align: center;
       margin: 0 auto;
+
       &__title {
         margin: 20px 0;
         font-size: 28px;
       }
+
       &__text {
         margin-bottom: 40px;
       }
+
       &__desc {
         display: block;
       }
+
       &__link {
         display: block;
         margin: 10px 0 0 0;
       }
+
       &__btn {
         margin: 0 auto 10px 0;
       }
     }
   }
+
+  .section {
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+
+  .advantage {
+    flex-direction: column;
+
+    &__item {
+      margin: 10px 0 0 0;
+      flex-basis: 0;
+    }
+  }
+
+  .goods {
+    &__item {
+      flex-basis: 100%;
+    }
+  }
 }
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
-}
+@media only screen and (max-width : 320px) {}
