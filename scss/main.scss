@@ -229,6 +229,7 @@ body {
   &-nav {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     transform: translate(0, -50%);
     z-index: 5;
@@ -569,3 +570,5 @@ body {
 }
 
 /* /Footer */
+
+@import 'media';
