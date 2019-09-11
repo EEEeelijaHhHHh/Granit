@@ -1,5 +1,6 @@
 @import 'fonts';
 @import 'normalize';
+@import 'icomoon';
 
 /* Variables */
 $active-color: #ffd200;
@@ -561,10 +562,21 @@ body {
   font-weight: 500;
   padding-left: 60px;
 
-  &__phone,
-  &__adress,
-  &__mail {
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &-phone, &-location, &-mail {
+    position: relative;
+  }
+
+  &-phone__text,
+  &-location__text,
+  &-mail__text {
     display: block;
+    margin-left: 30px;
   }
 
   &__title {
@@ -575,23 +587,29 @@ body {
     margin: 60px 0 50px 0;
   }
 
-  &__phone {
-    color: $main-color;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+  &-phone {
+    &__text {
+      color: $main-color;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 15px;
 
-    &:last-child {
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &-location {
+    &__text {
       margin-bottom: 40px;
     }
   }
 
-  &__adress {
-    margin-bottom: 40px;
-  }
-
-  &__mail {
-    color: $main-color;
+  &-mail {
+    &__text {
+      color: $main-color;
+    }
   }
 }
 
