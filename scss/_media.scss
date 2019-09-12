@@ -50,6 +50,12 @@
       transform: translate(0, 0);
       &_active .main-nav {
         display: flex;
+        &__item {
+          height: 100%;
+        }
+        &__link {
+          visibility: visible;
+        }
       }
       &__btn {
         display: block;
@@ -58,11 +64,16 @@
   }
 
   .main-nav {
-    display: none;
     flex-direction: column;
     justify-content: flex-start;
     &__item {
       line-height: 70px;
+      height: 0;
+      transition: height .3s;
+    }
+    &__link {
+      visibility: hidden;
+      transition: all .31s;
     }
   }
 
