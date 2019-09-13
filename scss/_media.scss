@@ -37,26 +37,43 @@
     &-inner {
       padding: 35px 20px 60px 20px;
     }
+
     &__btn {
       &-header {
         display: none;
       }
     }
   }
-  
+
   .header {
     &-nav {
       z-index: 10;
       transform: translate(0, 0);
+
       &_active .main-nav {
         display: flex;
+
         &__item {
           height: 100%;
         }
+
         &__link {
           visibility: visible;
         }
       }
+
+      &_active .header-nav__btn-hamburger {
+        background-color: transparent;
+      }
+
+      &_active .header-nav__btn-hamburger::before {
+        transform: rotate(45deg);
+      }
+
+      &_active .header-nav__btn-hamburger::after {
+        transform: rotate(-45deg);
+      }
+
       &__btn {
         display: block;
       }
@@ -66,11 +83,13 @@
   .main-nav {
     flex-direction: column;
     justify-content: flex-start;
+
     &__item {
       line-height: 70px;
       height: 0;
       transition: height .3s;
     }
+
     &__link {
       visibility: hidden;
       transition: all .31s;
@@ -194,13 +213,13 @@
       padding: 30px 0 20px 0;
     }
 
-    &-inner {
-    }
+    &-inner {}
 
     &__logo {
       margin-top: 40px;
       margin-bottom: 20px;
     }
+
     &__copyright {
       display: block;
       text-align: center;
